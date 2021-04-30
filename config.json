@@ -1,0 +1,56 @@
+{
+    "name": "Inline PDF Viewer",
+
+    "namespace": "InlinePDFModule\\InlinePDFModule",
+
+    "framework-version": 5, 
+
+    "description": "This module will allow you to view a PDF that has been uploaded to a file upload field as an embedded document within the Data Entry Form/Survey page of any instrument",
+
+    "authors": [
+        {
+             "name": "Kyle McGuffin",
+             "email": "kyle.mcguffin@vumc.org",
+             "institution": "Vanderbilt University Medical Center"
+         }
+     ],
+
+     "permissions": [
+        "redcap_data_entry_form",
+        "redcap_data_entry_form_top",
+        "redcap_survey_page",
+        "redcap_survey_page_top"
+     ],
+
+     "compatibility": {
+        "php-version-min": "",
+        "php-version-max": "",
+        "redcap-version-min": "",
+        "redcap-version-max": ""
+     },
+
+     "project-settings": [
+       {  
+        "name": "PDF Settings",
+        "key": "pdf-mapping",
+        "type": "sub_settings",
+        "repeatable": true,
+        "sub_settings": [
+        {
+            "key": "input-field",
+            "name": "Field to check for PDF",
+            "required": true,
+            "type": "field-list",
+			"field-type": "file",
+            "repeatable": false
+        },          
+        {
+            "key": "output-form",
+            "name": "Form to display the PDF",
+            "required": true,
+            "type": "form-list"
+        }           
+      ]
+    }
+  ]
+ }
